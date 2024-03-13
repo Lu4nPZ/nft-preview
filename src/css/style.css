@@ -1,0 +1,141 @@
+body{
+    font-family: 'Outfit', sans-serif;
+}
+
+main{
+    background-color: var(--dark-blue-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0px 15px;
+}
+
+.cartao{
+    background-color: var(--dark-blue-claro);
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.cartao .imagem-link{
+    display: flex;
+    position: relative;
+}
+
+.cartao .imagem-link .imagem-nft{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.cartao .imagem-link::before{
+    content: '';
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+.cartao .imagem-link:hover::before{
+    opacity: 0.4;
+}
+
+.cartao .imagem-link::after{
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+.cartao .imagem-link:hover::after{
+    opacity: 1;
+}
+
+.cartao .titulo-link .titulo{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0px;
+}
+
+.cartao .titulo-link .titulo:hover{
+    color: var(--cyan);
+    transition: 0.3s ease-in-out;
+}
+
+.cartao .descricao{
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.cartao .info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cartao .info .preco{
+    color: var(--cyan);
+    display: flex;
+    font-weight: 600;
+}
+
+.cartao .info .preco::before{
+    content: '';
+    background: url(../images/icon-ethereum.svg) no-repeat center;
+    width: 15px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.cartao .info .dias{
+    color: var(--blue);
+    display: flex;
+}
+
+.cartao .info .dias::before{
+    content: '';
+    background: url(../images/icon-clock.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+
+.cartao .avatar{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--dark-blue-cinza);
+    padding-top: 15px;
+}
+
+.cartao .avatar .imagem-avatar{
+    max-width: 30px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.cartao .avatar .creation{
+    color: var(--blue);
+    margin-left: 15px;
+}
+
+.cartao .avatar .creation .nome{
+    color: #FFFFFF;
+}
+
+.cartao .avatar .creation .nome:hover{
+    color: var(--cyan);
+    transition: 0.3s ease-in-out;
+}
